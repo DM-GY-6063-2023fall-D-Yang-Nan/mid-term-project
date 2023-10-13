@@ -9,13 +9,14 @@ let originalV = 10;
 
 
 function preload(){
-  img = loadImage('Leaf.png');
+  img = loadImage('Leaf green-02.png');
 }
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  strokeWeight(0.5);
+  stroke('LightSalmon');
+  strokeWeight(1);
   noFill();
 }
 
@@ -31,10 +32,10 @@ function draw() {
   // background(255, 10);
 translate(-width/2,-height/2);
 for(let i = 0; i < numLeaf; i++){
-  let currentLeafX = leafX + i * 600;
+  let currentLeafX = leafX + i * 550;
   image(img,currentLeafX,height-700,600,700);
   if(currentLeafX > width){
-   leafX -= 600;
+   leafX -= 550;
   }
 }
 leafX += v;
