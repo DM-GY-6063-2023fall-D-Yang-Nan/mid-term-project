@@ -1,4 +1,4 @@
-# Mid-term-project
+# Mid-term-project_ Week05
 
 I've chosen a film titled "Kikujiro," which is a Japanese movie directed by Takeshi Kitano. The story follows a middle school teacher named Kikujiro and his stepson, Masao. After the death of his wife, the two embark on a journey to find Masao's biological mother. Throughout this journey, they develop a deep bond and influence each other, growing together.
 
@@ -53,3 +53,65 @@ function draw() {
 function mousePressed() {
     // When the mouse is clicked, increase or decrease the movement speed of the reeds
 }
+
+
+# Mid-term-project_ Week06
+代码将由四个部分组成
+1.向前移动的荷叶
+2.鼠标按下去的时候荷叶渐渐停止，鼠标松开时渐渐恢复原速
+3.天空颜色是一个渐变色，竖向渐变，12点时是顶端rgb（189,231,242）—底端rgb（255），24点时是顶端rgb（12,26,53）—底端rgb（31,74,109）
+4.一个发射光芒的太阳
+5.车窗和车内物品
+
+下面是更详细的伪代码
+Declare image img and basic animation variables;
+
+// Sky color settings
+Declare startColorTop, endColorTop, startColorBottom, endColorBottom;
+
+Function preload():
+    Load image from '2222.png' into img;
+
+Function initialize():
+    Create canvas;
+    Set basic stroke and fill properties;
+    Initialize the starting and ending colors for the sky;
+
+Function draw():
+    // Sky background
+    Get the current hour;
+    Determine the sky color gradient based on the hour;
+    Call the gradient background drawing function;
+
+    // Sun
+    Move to the center of the screen;
+    Draw random arcs as sun rays;
+
+    // Leaf animation
+    Move back to the origin;
+    Display leaf images based on position and speed;
+    Update the position of the leaves;
+    Adjust speed based on mouse state;
+
+    // Window
+    Draw an outer large rectangle and an inner smaller rectangle;
+
+    // (Commented out) Text display
+    // Display "菊次郎の夏" at a specific position;
+
+Function drawGradientBackground(c1, c2):
+    Draw a vertical gradient on the canvas using colors c1 and c2;
+
+为了先测试可行性，我先用比较简单的图形在p5js中实现我想要的效果
+
+![DFS8Rk.png](https://imgpile.com/images/DFS8Rk.png)
+测试天空颜色随时间变化
+
+![DFSVfM.png](https://imgpile.com/images/DFSVfM.png)
+测试荷叶向前移动效果
+
+![DFSXF4.png](https://imgpile.com/images/DFSXF4.png)
+然后我在illustrator中画出简易的荷叶的形状，测试能否成功
+
+![DFSou2.png](https://imgpile.com/images/DFSou2.png)
+然后更改了荷叶的形状以及添加了天空的颜色
