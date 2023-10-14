@@ -115,3 +115,5 @@ Function drawGradientBackground(c1, c2):
 
 ![DFSou2.png](https://imgpile.com/images/DFSou2.png)
 然后更改了荷叶的形状以及添加了天空的颜色
+
+不知道视觉效果上是否要再做一些修改？
